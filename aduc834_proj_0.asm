@@ -32,15 +32,6 @@ LOOP:
 	JMP LOOP
 ;______________________________________________________________________
 ; Tu powinien znajdowaæ siê kod podprogramów i obs³ugi przerwañ np.:
-CZEKAJ: 
-
-	MOV B,#50
-	op:
-		MOV A,#255 ;255 cykli
-		DJNZ ACC,$ ;2 cykle
-		DJNZ B,op ;2 cykle
-	RET
-	
 	
 UP:
 	JNB P2.1, DOWN
@@ -80,5 +71,15 @@ DOWN:
 	CLR P0.0
 	
 	JMP DOWN
+	
+	
+	CZEKAJ: 
+
+	MOV B,#50
+	op:
+		MOV A,#255 ;255 cykli
+		DJNZ ACC,$ ;2 cykle
+		DJNZ B,op ;2 cykle
+	RET
 ; ______________________________________________________________________
 END						; Koniec kodu do kompilacji
