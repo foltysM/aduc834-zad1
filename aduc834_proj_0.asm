@@ -73,7 +73,7 @@ DOWN:
 	JMP DOWN
 	
 	
-	CZEKAJ: 
+CZEKAJ: 
 
 	MOV B,#50
 	op:
